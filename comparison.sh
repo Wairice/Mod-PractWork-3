@@ -10,6 +10,10 @@ par2=$2
 
 start_time=$(date +%s.%N)
 
+alias ll='ls -l'
+alias la='ls -a'
+alias grep='grep --color=auto'
+
 if [ "$par1" -gt "$par2" ]; then
     echo "1-й параметр більше за 2-й."
     echo "Список псевдонімів системи:"
@@ -29,4 +33,3 @@ execution_time=$(echo "$end_time - $start_time" | bc)
 echo "Час виконання скрипту: $execution_time секунд"
 
 exit 0
-
